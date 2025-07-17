@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import Title from "../components/Title";
-import ContactExperience from "../components/Contactexperience";
+import ContactExperience from "../components/ContactExperience";
 
 export default function Contact() {
     const formRef = useRef(null);

@@ -5,11 +5,11 @@ import Glow from "../components/Glow";
 
 const Testimonials = () => {
   return (
-    <section id="recognition" className="flex-center section-padding">
+    <section id="awards" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <Title
-          title="Education & Recognition"
-          sub="Degrees, fellowship, and honors"
+          title="Awards"
+          sub="Dean's List of Honors in consecutive semesters"
         />
 
         <div className="lg:columns-3 md:columns-2 columns-1 mt-16">

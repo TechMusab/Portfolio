@@ -12,8 +12,8 @@ const navLinks = [
       link: "#skills",
     },
     {
-      name: "Recognition",
-      link: "#recognition",
+      name: "Awards",
+      link: "#awards",
     },
     {
       name: "Contact",
@@ -209,63 +209,25 @@ const navLinks = [
   const testimonials = [
     {
       name: "Dean's List of Honors",
-      mentions: "Fall 2024 & Spring 2024",
+      mentions: "Consecutive semesters: Fall 2024 & Spring 2024",
       review:
         "Recognized for consecutive semesters with 3.7+ SGPA and consistent academic performance.",
       imgPath: "/images/client1.png",
     },
     {
-      name: "FAST National University",
-      mentions: "Islamabad, Pakistan",
-      review:
-        "BS Software Engineering, 2022 - 2026, with a 3.24 CGPA and a focus on scalable software systems.",
-      imgPath: "/images/client3.png",
-    },
-    {
-      name: "Amal Academy",
-      mentions: "Stanford-funded Fellowship",
+      name: "Stanford-Funded Fellowship",
+      mentions: "Amal Academy",
       review:
         "Completed a career-prep fellowship focused on communication, leadership, teamwork, and problem-solving.",
       imgPath: "/images/client2.png",
-    },
-    {
-      name: "Chrio",
-      mentions: "AI Sports Infotainment",
-      review:
-        "Built real-time product features for an AI-powered sports platform with scalable APIs and reliable performance.",
-      imgPath: "/images/client5.png",
-    },
-    {
-      name: "HomeEase",
-      mentions: "AI-Powered Home Services",
-      review:
-        "Built an AI-driven matching experience for users looking for relevant service providers.",
-      imgPath: "/images/client4.png",
-    },
-    {
-      name: "Ham Raah",
-      mentions: "Student Ride-Sharing",
-      review:
-        "Designed intelligent route-matching logic for student ride coordination, timing, and cost efficiency.",
-      imgPath: "/images/client6.png",
     },
   ];
   
   const socialImgs = [
     {
-      name: "insta",
-      url: "https://www.instagram.com/",
-      imgPath: "/images/insta.png",
-    },
-    {
-      name: "fb",
-      url: "https://www.facebook.com/",
-      imgPath: "/images/fb.png",
-    },
-    {
-      name: "x",
-      url: "https://www.x.com/",
-      imgPath: "/images/x.png",
+      name: "github",
+      url: "https://github.com/TechMusab",
+      imgPath: "/images/github.svg",
     },
     {
       name: "linkedin",

@@ -56,7 +56,7 @@ export default function Showcase() {
             {/* LEFT */}
             <div ref={p1ref} className="first-project-wrapper">
               <div className="image-wrapper">
-                <img src="/images/project1.png" alt="HomeEase" />
+                <img src="/images/project-ai-homeease.svg" alt="HomeEase AI illustration" />
               </div>
               <div className="text-content">
                 <h2>
@@ -72,15 +72,15 @@ export default function Showcase() {
               <div ref={p2ref} className="project">
                 <div className="image-wrapper bg-[#ffefdb]">
                   <img
-                    src="/images/project2.png"
-                    alt="Ham Raah"
+                    src="/images/project-ai-hamraah.svg"
+                    alt="Ham Raah AI illustration"
                   />
                 </div>
                 <h2>Ham Raah - Smart Ride-Sharing for Students</h2>
               </div>
               <div ref={p3ref} className="project">
                 <div className="image-wrapper bg-[#ffe7eb]">
-                  <img src="/images/project3.png" alt="Multi-Vendor eCommerce Store" />
+                  <img src="/images/project-ai-ecommerce.svg" alt="Multi-Vendor eCommerce illustration" />
                 </div>
                 <h2>Multi-Vendor eCommerce Store</h2>
               </div>

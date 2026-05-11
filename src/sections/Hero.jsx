@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 
 export default function Hero() {
+  const resumeUrl = new URL("../../MUSAB BIN UBAID.pdf", import.meta.url).href;
 
   useGSAP(() => {
     gsap.fromTo('.hero-text h1',
@@ -63,13 +64,59 @@ export default function Hero() {
               <h1>that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-             Full-stack engineer building scalable, high-performance products with MERN, Next.js, AWS, and AI-driven solutions.
+             <span className="block">Full-stack engineer building scalable, high-performance products with MERN, Next.js, AWS,</span>
+             <span className="block">and AI-driven solutions.</span>
             </p>
-            <Button
-            className="md:w-80 md:h-16 w-60 h-12"
-            id="button"
-            text="View My Projects"
-            ></Button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                className="md:w-80 md:h-16 w-60 h-12"
+                id="button"
+                text="View My Projects"
+              ></Button>
+              <a
+                className="md:w-80 md:h-16 w-60 h-12 cta-wrapper"
+                href={resumeUrl}
+                download="Muhammad-Musab-Bin-Ubaid-Resume.pdf"
+              >
+                <div className="cta-button group">
+                  <div className="bg-circle" />
+                  <p className="text">Download Resume</p>
+                  <div className="arrow-wrapper">
+                    <img src="/images/arrow-down.svg" alt="download resume" />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 mt-2">
+              <a
+                className="md:w-80 md:h-16 w-60 h-12 cta-wrapper"
+                href="https://github.com/TechMusab"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="cta-button group">
+                  <div className="bg-circle" />
+                  <p className="text">GitHub</p>
+                  <div className="arrow-wrapper">
+                    <img src="/images/arrow-right.svg" alt="github link" />
+                  </div>
+                </div>
+              </a>
+              <a
+                className="md:w-80 md:h-16 w-60 h-12 cta-wrapper"
+                href="https://www.linkedin.com/in/musabbinubaid/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="cta-button group">
+                  <div className="bg-circle" />
+                  <p className="text">LinkedIn</p>
+                  <div className="arrow-wrapper">
+                    <img src="/images/arrow-right.svg" alt="linkedin link" />
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </header>
 

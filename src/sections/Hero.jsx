@@ -64,8 +64,8 @@ export default function Hero() {
               <h1>that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-             <span className="block">Full-stack engineer building scalable, high-performance products with MERN, Next.js, AWS,</span>
-             <span className="block">and AI-driven solutions.</span>
+             <span className="block">Full-stack engineer building scalable, high-performance products</span> 
+             <span className="block">with MERN, Next.js, AWS,and AI-driven solutions.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -115,6 +115,34 @@ export default function Hero() {
                     <img src="/images/arrow-right.svg" alt="linkedin link" />
                   </div>
                 </div>
+              </a>
+            </div>
+            <div className="flex gap-6 mt-6">
+              <a
+                href={resumeUrl}
+                download="Muhammad-Musab-Bin-Ubaid-Resume.pdf"
+                className="flex items-center justify-center w-16 h-16 rounded-full border border-white border-opacity-30 hover:border-opacity-100 transition-all hover:scale-110"
+                title="Download Resume"
+              >
+                <img src="/images/download.svg" alt="download resume" className="w-8 h-8" />
+              </a>
+              <a
+                href="https://github.com/TechMusab"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center w-16 h-16 rounded-full border border-white border-opacity-30 hover:border-opacity-100 transition-all hover:scale-110"
+                title="GitHub Profile"
+              >
+                <img src="/images/github.svg" alt="github link" className="w-8 h-8" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/musabbinubaid/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center w-16 h-16 rounded-full border border-white border-opacity-30 hover:border-opacity-100 transition-all hover:scale-110"
+                title="LinkedIn Profile"
+              >
+                <img src="/images/linkedin.png" alt="linkedin link" className="w-8 h-8" />
               </a>
             </div>
           </div>

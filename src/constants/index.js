@@ -212,14 +212,6 @@ const navLinks = [
       mentions: "Consecutive semesters: Fall 2024 & Spring 2024",
       review:
         "Recognized for consecutive semesters with 3.7+ SGPA and consistent academic performance.",
-      imgPath: "/images/client1.png",
-    },
-    {
-      name: "Stanford-Funded Fellowship",
-      mentions: "Amal Academy",
-      review:
-        "Completed a career-prep fellowship focused on communication, leadership, teamwork, and problem-solving.",
-      imgPath: "/images/client2.png",
     },
   ];
   

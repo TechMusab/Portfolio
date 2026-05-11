@@ -12,7 +12,7 @@ export default function HeroModel() {
 
   return (
     <>
-      <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+      <Canvas camera={{ position: [0, 0, 15], fov: 45 }} frameloop="demand" dpr={[1, 1.5]}>
       
         <OrbitControls
         enablePan={false}

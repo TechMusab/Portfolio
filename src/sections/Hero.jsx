@@ -1,7 +1,8 @@
 import React from "react";
 import { words } from "../constants/index";
 import Button from "../components/Button.jsx";
-import HeroModel from "../components/HeroModel.jsx";
+import React, { Suspense } from "react";
+const HeroModel = React.lazy(() => import("../components/HeroModel.jsx"));
 import AnimatedCounter from "../components/AnimatedCounter.jsx";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
@@ -73,49 +74,6 @@ export default function Hero() {
                 id="button"
                 text="View My Projects"
               ></Button>
-              <a
-                className="md:w-80 md:h-16 w-60 h-12 cta-wrapper"
-                href={resumeUrl}
-                download="Muhammad-Musab-Bin-Ubaid-Resume.pdf"
-              >
-                <div className="cta-button group">
-                  <div className="bg-circle" />
-                  <p className="text">Download Resume</p>
-                  <div className="arrow-wrapper">
-                    <img src="/images/arrow-down.svg" alt="download resume" />
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <a
-                className="md:w-80 md:h-16 w-60 h-12 cta-wrapper"
-                href="https://github.com/TechMusab"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="cta-button group">
-                  <div className="bg-circle" />
-                  <p className="text">GitHub</p>
-                  <div className="arrow-wrapper">
-                    <img src="/images/arrow-right.svg" alt="github link" />
-                  </div>
-                </div>
-              </a>
-              <a
-                className="md:w-80 md:h-16 w-60 h-12 cta-wrapper"
-                href="https://www.linkedin.com/in/musabbinubaid/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="cta-button group">
-                  <div className="bg-circle" />
-                  <p className="text">LinkedIn</p>
-                  <div className="arrow-wrapper">
-                    <img src="/images/arrow-right.svg" alt="linkedin link" />
-                  </div>
-                </div>
-              </a>
             </div>
             <div className="flex gap-6 mt-6">
               <a
@@ -151,7 +109,9 @@ export default function Hero() {
         {/* right 3d model */}
         <figure>
           <div className="hero-3d-layout">
-            <HeroModel></HeroModel>
+            <Suspense fallback={<div style={{width:320,height:240}}/>}>
+              <HeroModel />
+            </Suspense>
           </div>
         </figure>
       </div>

@@ -47,11 +47,8 @@ export default function Contact() {
       <div className="w-full h-full md:px-10 px-5">
         <Title
           title="Get in Touch"
-          sub="Email, LinkedIn, or send a message below"
+          sub=""
         />
-        <p className="mt-6 text-white-50 text-center md:text-left">
-          +92-306-7674978 · buildwithmusab@gmail.com · linkedin.com/in/musabbinubaid
-        </p>
         <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">

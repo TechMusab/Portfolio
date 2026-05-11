@@ -6,18 +6,24 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
-          <p>Terms & Conditions</p>
+          <p>Built for production-focused hiring</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (
-            <div key={index} className="icon">
-              <img src={socialImg.imgPath} alt="social icon" />
-            </div>
+            <a
+              key={index}
+              className="icon"
+              href={socialImg.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={socialImg.imgPath} alt={socialImg.name} />
+            </a>
           ))}
         </div>
         <div className="flex flex-col justify-center">
           <p className="text-center md:text-end">
-            © {new Date().getFullYear()} Musab Joiya. All rights reserved.
+            © {new Date().getFullYear()} Muhammad Musab Bin Ubaid. All rights reserved.
           </p>
         </div>
       </div>

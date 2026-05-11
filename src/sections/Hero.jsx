@@ -63,12 +63,12 @@ export default function Hero() {
               <h1>that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-             Hi I'm Musab a Developer based in Pakistan with a passion for code
+             Full-stack engineer building scalable, high-performance products with MERN, Next.js, AWS, and AI-driven solutions.
             </p>
             <Button
             className="md:w-80 md:h-16 w-60 h-12"
             id="button"
-            text="See My Work"
+            text="View My Projects"
             ></Button>
           </div>
         </header>

@@ -56,16 +56,15 @@ export default function Showcase() {
             {/* LEFT */}
             <div ref={p1ref} className="first-project-wrapper">
               <div className="image-wrapper">
-                <img src="/images/project1.png" alt="Ryde" />
+                <img src="/images/project1.png" alt="HomeEase" />
               </div>
               <div className="text-content">
                 <h2>
-                  On-Demand Rides made simple with a Powerful, User-friendly App
-                  called Ryde{" "}
+                  HomeEase - AI-Powered Home Services Platform{" "}
                 </h2>
-                <p className="text-white-50 md:text-3xl"></p>
-                An app built with React Native,Expo & Tailwind CSS for a fast
-                User Friendly Experience.
+                <p className="text-white-50 md:text-3xl">
+                  AI-driven recommendations that match users with relevant service providers, with chatbot support and scalable backend systems.
+                </p>
               </div>
             </div>
             {/* RIGHT */}
@@ -74,16 +73,16 @@ export default function Showcase() {
                 <div className="image-wrapper bg-[#ffefdb]">
                   <img
                     src="/images/project2.png"
-                    alt="Library Management Platform"
+                    alt="Ham Raah"
                   />
                 </div>
-                <h2>Library Management Platform</h2>
+                <h2>Ham Raah - Smart Ride-Sharing for Students</h2>
               </div>
               <div ref={p3ref} className="project">
                 <div className="image-wrapper bg-[#ffe7eb]">
-                  <img src="/images/project3.png" alt="YC Directory" />
+                  <img src="/images/project3.png" alt="Multi-Vendor eCommerce Store" />
                 </div>
-                <h2>YC-Directory A Startup Showcase App</h2>
+                <h2>Multi-Vendor eCommerce Store</h2>
               </div>
             </div>
           </div>

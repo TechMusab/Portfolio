@@ -153,7 +153,7 @@ const navLinks = [
     {
       review:
         "Focused on software engineering fundamentals, applied full-stack development, and maintained a 3.24 CGPA while building real-world projects.",
-      imgPath: "",
+      imgPath: "/logo.png",
       logoPath: "/logo.png",
       title: "FAST National University of Computer & Emerging Sciences",
       date: "BS Software Engineering | 2022 - 2026",
@@ -166,7 +166,7 @@ const navLinks = [
     {
       review:
         "Selected from 4,500+ applicants for a Stanford-funded fellowship and completed intensive professional training.",
-      imgPath: "",
+      imgPath: "/Amal+Website_Favicon_Regular.png",
       logoPath: "/Amal+Website_Favicon_Regular.png",
       title: "AMAL ACADEMY",
       date: "Career-Prep Fellow | Aug 2025 - Nov 2025",
@@ -182,7 +182,7 @@ const navLinks = [
     {
       review:
         "Built and shipped full-stack features for a real-time AI-powered sports infotainment platform.",
-      imgPath: "",
+      imgPath: "/Chrio.ico",
       logoPath: "/Chrio.ico",
       title: "CHRIO",
       date: "Full Stack Developer | Jun 2025 - Aug 2025",

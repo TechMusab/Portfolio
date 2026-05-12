@@ -7,6 +7,8 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 
 export default function Hero() {
+  const resumeUrl = new URL("../../MUSAB BIN UBAID.pdf", import.meta.url).href;
+
   useGSAP(() => {
     gsap.fromTo('.hero-text h1',
     {
@@ -74,15 +76,16 @@ export default function Hero() {
             </div>
             <div className="flex gap-6 mt-6">
               <a
-                href="#contact"
+                href={resumeUrl}
+                download="Muhammad-Musab-Bin-Ubaid-Resume.pdf"
                 className="cta-wrapper"
-                title="Contact Me"
+                title="Download Resume"
               >
                 <div className="cta-button group">
                   <div className="bg-circle" />
-                  <p className="text">Contact</p>
+                  <p className="text">Download</p>
                   <div className="arrow-wrapper">
-                    <img src="/images/arrow-down.svg" alt="arrow" />
+                    <img src="/images/download.svg" alt="download" />
                   </div>
                 </div>
               </a>

@@ -33,7 +33,7 @@ const navLinks = [
   ];
   
   const counterItems = [
-    { value: 4, suffix: "+", label: "Years of Building" },
+    { value: 3, suffix: "+", label: "Years of Building" },
     { value: 3, suffix: "+", label: "Core Projects" },
     { value: 2, suffix: "", label: "Professional Roles" },
     { value: 150, suffix: "+", label: "Hours of Training" },

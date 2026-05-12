@@ -45,7 +45,7 @@ export default function Navbar() {
               >
                 <div className="cta-button group">
                   <div className="bg-circle" />
-                  <p className="text">Download</p>
+                  <p className="text">Download Resume</p>
                   <div className="arrow-wrapper">
                     <img src="/images/download.svg" alt="download" />
                   </div>

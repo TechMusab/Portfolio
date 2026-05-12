@@ -71,7 +71,7 @@ export default function Experience() {
                     <div className="xl:w-2/6">
                       <Glow card={card} index={index}>
                         <div>
-                          <img src={card.imgPath} alt={card.title} className="w-24 h-24 md:w-32 md:h-32 object-cover rounded" />
+                          <img src={card.imgPath} alt={card.title} className="w-10 h-10 md:w-10 md:h-10 object-cover rounded" />
                         </div>
                       </Glow>
                     </div>
@@ -120,7 +120,7 @@ export default function Experience() {
                     <div className="xl:w-2/6">
                       <Glow card={card} index={index}>
                         <div>
-                          <img src={card.imgPath} alt={card.title} className="w-24 h-24 md:w-32 md:h-32 object-cover rounded" />
+                          <img src={card.imgPath} alt={card.title} className="w-10 h-10 md:w-10 md:h-10 object-cover rounded" />
                         </div>
                       </Glow>
                     </div>

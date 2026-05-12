@@ -163,6 +163,9 @@ const navLinks = [
         "Maintained 3.24 CGPA while balancing coursework and project development.",
       ],
     },
+  ];
+
+  const professionalCards = [
     {
       review:
         "Selected from 4,500+ applicants for a Stanford-funded fellowship and completed intensive professional training.",
@@ -176,9 +179,6 @@ const navLinks = [
         "Applied structured problem-solving to real-world career and team scenarios.",
       ],
     },
-  ];
-
-  const professionalCards = [
     {
       review:
         "Built and shipped full-stack features for a real-time AI-powered sports infotainment platform.",

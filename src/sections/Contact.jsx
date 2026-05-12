@@ -24,15 +24,27 @@ export default function Contact() {
       setLoading(true); // Show loading state
   
       try {
-        await emailjs.sendForm(
+        await emailjs.send(
           import.meta.env.VITE_APP_EMAIL_JS_SERVICE_ID,
           import.meta.env.VITE_APP_EMAIL_JS_TEMPLATE_ID,
-          formRef.current,
-          import.meta.env.VITE_APP_EMAIL_JS_PUBLIC_KEY
+          {
+            name: form.name,
+            email: form.email,
+            message: form.message,
+            from_name: form.name,
+            from_email: form.email,
+            reply_to: form.email,
+          },
+          {
+            publicKey: import.meta.env.VITE_APP_EMAIL_JS_PUBLIC_KEY,
+          }
         );
   
         // Reset form and stop loading
         setForm({ name: "", email: "", message: "" });
+        if (formRef.current) {
+          formRef.current.reset();
+        }
       } catch (error) {
         console.error("EmailJS Error:", error); // Optional: show toast
       } finally {
@@ -96,7 +108,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <button type="submit">
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">

@@ -1,4 +1,3 @@
-import React from "react";
 import { words } from "../constants/index";
 import Button from "../components/Button.jsx";
 import React, { Suspense } from "react";

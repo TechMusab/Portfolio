@@ -194,8 +194,6 @@ const navLinks = [
   const expLogos = [
   ];
   
-  ];
-  
   const testimonials = [
     {
       name: "Dean's List of Honors",

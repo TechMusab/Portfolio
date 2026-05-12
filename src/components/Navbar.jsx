@@ -4,6 +4,7 @@ import { navLinks } from "../constants";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const resumeUrl = new URL("../../MUSAB BIN UBAID.pdf", import.meta.url).href;
 
   useEffect(()=>{
     const handleScroll=()=>{
@@ -36,11 +37,20 @@ export default function Navbar() {
               ))}
             </ul>
           </nav>
-          <a className="contact-btn group" href="#contact">
-            <div className="inner">
-              <span>Contact me</span>
-            </div>
-          </a>
+                        <a
+                href={resumeUrl}
+                download="Muhammad-Musab-Bin-Ubaid-Resume.pdf"
+                className="cta-wrapper"
+                title="Download Resume"
+              >
+                <div className="cta-button group">
+                  <div className="bg-circle" />
+                  <p className="text">Download</p>
+                  <div className="arrow-wrapper">
+                    <img src="/images/download.svg" alt="download" />
+                  </div>
+                </div>
+              </a>
         </div>
       </header>
     </>

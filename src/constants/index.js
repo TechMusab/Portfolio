@@ -149,7 +149,7 @@ const navLinks = [
     },
   ];
   
-  const expCards = [
+  const educationCards = [
     {
       review:
         "Focused on software engineering fundamentals, applied full-stack development, and maintained a 3.24 CGPA while building real-world projects.",
@@ -176,6 +176,9 @@ const navLinks = [
         "Applied structured problem-solving to real-world career and team scenarios.",
       ],
     },
+  ];
+
+  const professionalCards = [
     {
       review:
         "Built and shipped full-stack features for a real-time AI-powered sports infotainment platform.",
@@ -221,7 +224,8 @@ const navLinks = [
     abilities,
     logoIconsList,
     counterItems,
-    expCards,
+    educationCards,
+    professionalCards,
     expLogos,
     testimonials,
     socialImgs,

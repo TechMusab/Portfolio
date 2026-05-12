@@ -78,10 +78,11 @@ export default function Hero() {
               <a
                 href={resumeUrl}
                 download="Muhammad-Musab-Bin-Ubaid-Resume.pdf"
-                className="flex items-center justify-center w-16 h-16 rounded-full border border-white border-opacity-30 hover:border-opacity-100 transition-all hover:scale-110"
+                className="flex items-center justify-center gap-2 px-6 h-12 rounded-full border border-white border-opacity-30 hover:border-opacity-100 transition-all hover:scale-110"
                 title="Download Resume"
               >
-                <img src="/images/download.svg" alt="download resume" className="w-8 h-8" />
+                <img src="/images/download.svg" alt="download resume" className="w-5 h-5" />
+                <span className="text-sm font-medium">Download Resume</span>
               </a>
               <a
                 href="https://github.com/TechMusab"

@@ -69,7 +69,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-32 pb-2 relative z-10">
+      <div className="container mx-auto px-6 pt-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
@@ -83,12 +83,9 @@ export const Hero = () => {
             {/* Headline */}
             <div className="space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Building <span className="text-primary glow-text">scalable</span>
-                <br />
-                full-stack solutions with
-                <br />
+              Engineering <span className="text-primary glow-text">scalable systems </span>
                 <span className="font-serif italic font-normal text-white">
-                  purpose.
+                for real-world impact
                 </span>
               </h1>
               <p className="text-base text-muted-foreground max-w-md animate-fade-in animation-delay-200">

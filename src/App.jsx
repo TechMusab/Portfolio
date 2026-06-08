@@ -1,28 +1,25 @@
-import React from "react";
-import Hero from "./sections/Hero.jsx";
-import Showcase from "./sections/Showcase.jsx";
-import Navbar from "./components/Navbar.jsx";
-import LogoSection from "./sections/Logosection.jsx";
-import Featurecard from "./sections/Featurecard.jsx";
-import Experience from "./sections/Experience.jsx";
-import Tech from "./sections/Tech.jsx";
-import Testimonials from "./sections/Testimonials.jsx";
-import Contact from "./sections/Contact.jsx";
-import Footer from "./sections/Footer.jsx";
+import { Navbar } from "@/layout/Navbar";
+import { Hero } from "@/sections/Hero";
+import { About } from "@/sections/About";
+import { Projects } from "@/sections/Projects";
+import { Experience } from "@/sections/Experience";
+import { Contact } from "@/sections/Contact";
+import { Footer } from "./layout/Footer";
 
-export default function App() {
+function App() {
   return (
-    <>
-    <Navbar></Navbar>
-      <Hero></Hero>
-      <Showcase />
-      <LogoSection></LogoSection>
-      <Featurecard></Featurecard>
-      <Experience></Experience>
-      <Tech />
-      <Testimonials></Testimonials>
-      <Contact></Contact>
-      <Footer></Footer>
-    </>
+    <div className="min-h-screen overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   );
 }
+
+export default App;

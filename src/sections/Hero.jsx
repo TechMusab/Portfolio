@@ -1,112 +1,212 @@
-import { words } from "../constants/index";
-import Button from "../components/Button.jsx";
-import React, { Suspense } from "react";
-const HeroModel = React.lazy(() => import("../components/HeroModel.jsx"));
-import AnimatedCounter from "../components/AnimatedCounter.jsx";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import { Button } from "@/components/Button";
+import {
+  ArrowRight,
+  ChevronDown,
+  Github,
+  Linkedin,
+  Twitter,
+  Download,
+} from "lucide-react";
+import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
-export default function Hero() {
-  
+const skills = [
+  "React.js",
+  "Next.js",
+  "React Native",
+  "Tailwind CSS",
+  "HTML5",
+  "CSS3",
+  "Node.js",
+  "Express.js",
+  "REST APIs",
+  "PostgreSQL",
+  "MySQL",
+  "MongoDB",
+  "AWS",
+  "Docker",
+  "Linux",
+  "CI/CD",
+  "Kubernetes",
+  "Git",
+  "GitHub",
+  "Deployment",
+  "JavaScript",
+  "TypeScript",
+  "Python",
+  "C++",
+  "C#",
+];
 
-  useGSAP(() => {
-    gsap.fromTo('.hero-text h1',
-    {
-      y:50,
-      opacity:0
-    },
-    {
-      y:0,
-      opacity:1,
-      stagger:0.2,
-      duration:1,
-      ease:"power2.inOut"
-    }
-  )
-  })
-
+export const Hero = () => {
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="absolute top-0 left-0 z-10">
-        <img src="/images/bg.png" alt="background" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Bg */}
+      <div className="absolute inset-0">
+        <img
+          src="/hero-bg.jpg"
+          alt="Hero image"
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
       </div>
 
-      <div className="hero-layout">
-        {/* left */}
-        <header
-          className="flex flex-col justify-center md:w-full w-screen
-      md:px-20 px-5"
-        >
-          <div className="flex flex-col gap-7">
-            <div className="hero-text">
-              <h1>
-                Shaping
-                <span className="slide">
-                  <span className="wrapper">
-                    {words.map((word) => (
-                      <span
-                      className="flex items-center md:gap-3 gap-1 pb-2"
-                      key={word.text}
-                      >
-                        <img
-                          src={word.imgPath}
-                          alt={word.text}
-                          className="xl:size-12 md:size-10 size-7 md:p-2 p-1
-                          rounded-full bg-white-50"
-                        />
-                        <span>{word.text}</span>
-                      </span>
-                    ))}
-                  </span>
+      {/* Green Dots */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(30)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1.5 h-1.5 rounded-full opacity-60"
+            style={{
+              backgroundColor: "#20B2A6",
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `slow-drift ${15 + Math.random() * 20
+                }s ease-in-out infinite`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto px-6 pt-32 pb-2 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Left Column - Text Content */}
+          <div className="space-y-6">
+            <div className="animate-fade-in">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+                Software Engineer • Full Stack & Mobile Dev
+              </span>
+            </div>
+
+            {/* Headline */}
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
+                Building <span className="text-primary glow-text">scalable</span>
+                <br />
+                full-stack solutions with
+                <br />
+                <span className="font-serif italic font-normal text-white">
+                  purpose.
                 </span>
               </h1>
-              <h1>into Real Projects</h1>
-              <h1>that Deliver Results</h1>
+              <p className="text-base text-muted-foreground max-w-md animate-fade-in animation-delay-200">
+                Hi, I'm Muhammad Musab Bin Ubaid  — an aspiring Software Engineer with hands-on experience in building scalable full-stack applications using modern web technologies.
+              </p>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-             <span className="block">Full-stack engineer building scalable, high-performance products</span> 
-             <span className="block">with MERN, Next.js, AWS,and AI-driven solutions.</span>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                className="md:w-80 md:h-16 w-60 h-12"
-                id="button"
-                text="View My Projects"
-              ></Button>
-            </div>
-            <div className="flex gap-6 mt-6">
-              <a
-                href="https://github.com/TechMusab"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center w-16 h-16 rounded-full border border-white border-opacity-30 hover:border-opacity-100 transition-all hover:scale-110"
-                title="GitHub Profile"
-              >
-                <img src="/images/github.svg" alt="github link" className="w-8 h-8" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/musabbinubaid/"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center w-16 h-16 rounded-full border border-white border-opacity-30 hover:border-opacity-100 transition-all hover:scale-110"
-                title="LinkedIn Profile"
-              >
-                <img src="/images/linkedin.png" alt="linkedin link" className="w-8 h-8" />
-              </a>
-            </div>
-          </div>
-        </header>
 
-        {/* right 3d model */}
-        <figure>
-          <div className="hero-3d-layout">
-            <Suspense fallback={<div style={{width:320,height:240}}/>}>
-              <HeroModel />
-            </Suspense>
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+              <a href="#contact">
+                <Button size="lg">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+              <a href="/Resume_Muhammad_Musab_Bin_Ubaid.pdf" download="Muhammad_Musab_Resume.pdf">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground">Follow me: </span>
+              {[
+                { icon: Github, href: "https://github.com/TechMusab" },
+                { icon: Linkedin, href: "https://linkedin.com/in/musabbinubaid/" },
+              ].map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-5 h-5" />}
+                </a>
+              ))}
+            </div>
           </div>
-        </figure>
+          {/* Right Column - Profile Image */}
+          <div className="relatice animate-fade-in animation-delay-300">
+            {/* Profile Image */}
+            <div className="relative max-w-sm mx-auto">
+              <div
+                className="absolute inset-0 
+              rounded-3xl bg-gradient-to-br 
+              from-primary/30 via-transparent 
+              to-primary/10 blur-2xl animate-pulse"
+              />
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="/pic.png"
+                  alt="Muhammad Musab Bin Ubaid"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                />
+
+                {/* Floating Badge */}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Available for work
+                    </span>
+                  </div>
+                </div>
+                {/* Stats Badge */}
+                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                  <div className="text-sm font-bold text-primary">Software Engineer</div>
+                  <div className="text-xs text-muted-foreground">
+                    FAST NUCES
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills Section */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div
+              className="absolute left-0 top-0 bottom-0 w-32
+             bg-gradient-to-r from-background to-transparent z-10"
+            />
+            <div
+              className="absolute right-0 top-0 bottom-0 w-32
+             bg-gradient-to-l from-background to-transparent z-10"
+            />
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
+                    {skill}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
-      <AnimatedCounter></AnimatedCounter>
+
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 
+      animate-fade-in animation-delay-800"
+      >
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
+      </div>
     </section>
   );
-}
+};

@@ -4,7 +4,6 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-  Twitter,
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
@@ -18,6 +17,7 @@ const skills = [
   "CSS3",
   "Node.js",
   "Express.js",
+  "ASP.NET Core",
   "REST APIs",
   "PostgreSQL",
   "MySQL",
@@ -29,18 +29,24 @@ const skills = [
   "Kubernetes",
   "Git",
   "GitHub",
-  "Deployment",
   "JavaScript",
   "TypeScript",
   "Python",
   "C++",
   "C#",
+  "Java",
 ];
+
+const floatingDots = Array.from({ length: 30 }, (_, i) => ({
+  left: `${(i * 37 + 11) % 100}%`,
+  top: `${(i * 53 + 17) % 100}%`,
+  duration: `${15 + ((i * 7) % 20)}s`,
+  delay: `${(i % 5) * 0.8}s`,
+}));
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Bg */}
       <div className="absolute inset-0">
         <img
           src="/hero-bg.jpg"
@@ -50,57 +56,60 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
       </div>
 
-      {/* Green Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {floatingDots.map((dot, i) => (
           <div
             key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${15 + Math.random() * 20
-                }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
+              left: dot.left,
+              top: dot.top,
+              animation: `slow-drift ${dot.duration} ease-in-out infinite`,
+              animationDelay: dot.delay,
             }}
           />
         ))}
       </div>
 
-      {/* Content */}
       <div className="container mx-auto px-6 pt-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left Column - Text Content */}
           <div className="space-y-6">
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • Full Stack & Mobile Dev
+                Software Engineer - Full Stack & Mobile Dev
               </span>
             </div>
 
-            {/* Headline */}
             <div className="space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
-              Engineering <span className="text-primary glow-text">scalable systems </span>
+                Engineering{" "}
+                <span className="text-primary glow-text">
+                  scalable systems{" "}
+                </span>
                 <span className="font-serif italic font-normal text-white">
-                for real-world impact
+                  for real-world impact
                 </span>
               </h1>
               <p className="text-base text-muted-foreground max-w-md animate-fade-in animation-delay-200">
-                Hi, I'm Muhammad Musab Bin Ubaid  — an aspiring Software Engineer with hands-on experience in building scalable full-stack applications using modern web technologies.
+                Hi, I'm Muhammad Musab Bin Ubaid - a Software Engineer building
+                scalable full-stack web and mobile applications with React,
+                Next.js, React Native, Node.js, Express.js, MongoDB, and ASP.NET
+                Core.
               </p>
             </div>
 
-            {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <a href="#contact">
                 <Button size="lg">
                   Contact Me <ArrowRight className="w-5 h-5" />
                 </Button>
               </a>
-              <a href="/Resume_Muhammad_Musab_Bin_Ubaid.pdf" download="Muhammad_Musab_Resume.pdf">
+              <a
+                href="/Resume_Muhammad_Musab_Bin_Ubaid.pdf"
+                download="Muhammad_Musab_Bin_Ubaid_Resume.pdf"
+              >
                 <AnimatedBorderButton>
                   <Download className="w-5 h-5" />
                   Download CV
@@ -108,35 +117,31 @@ export const Hero = () => {
               </a>
             </div>
 
-            {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: Github, href: "https://github.com/TechMusab" },
-                { icon: Linkedin, href: "https://linkedin.com/in/musabbinubaid/" },
-              ].map((social, idx) => (
+                {
+                  icon: Linkedin,
+                  href: "https://linkedin.com/in/musabbinubaid/",
+                },
+              ].map((social) => (
                 <a
-                  key={idx}
+                  key={social.href}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
-                  {<social.icon className="w-5 h-5" />}
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
-          {/* Right Column - Profile Image */}
-          <div className="relatice animate-fade-in animation-delay-300">
-            {/* Profile Image */}
+
+          <div className="relative animate-fade-in animation-delay-300">
             <div className="relative max-w-sm mx-auto">
-              <div
-                className="absolute inset-0 
-              rounded-3xl bg-gradient-to-br 
-              from-primary/30 via-transparent 
-              to-primary/10 blur-2xl animate-pulse"
-              />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
                   src="/pic.png"
@@ -144,7 +149,6 @@ export const Hero = () => {
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
-                {/* Floating Badge */}
                 <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
@@ -153,9 +157,10 @@ export const Hero = () => {
                     </span>
                   </div>
                 </div>
-                {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-sm font-bold text-primary">Software Engineer</div>
+                  <div className="text-sm font-bold text-primary">
+                    Software Engineer
+                  </div>
                   <div className="text-xs text-muted-foreground">
                     FAST NUCES
                   </div>
@@ -165,23 +170,16 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Skills Section */}
         <div className="mt-20 animate-fade-in animation-delay-600">
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>
           <div className="relative overflow-hidden">
-            <div
-              className="absolute left-0 top-0 bottom-0 w-32
-             bg-gradient-to-r from-background to-transparent z-10"
-            />
-            <div
-              className="absolute right-0 top-0 bottom-0 w-32
-             bg-gradient-to-l from-background to-transparent z-10"
-            />
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
             <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                <div key={`${skill}-${idx}`} className="flex-shrink-0 px-8 py-4">
                   <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">
                     {skill}
                   </span>
@@ -192,10 +190,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800">
         <a
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"

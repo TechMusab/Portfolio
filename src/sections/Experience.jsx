@@ -1,29 +1,47 @@
 const experiences = [
   {
-    period: "Aug 2022 — Jun 2026",
-    role: "BS Software Engineering (CGPA: 3.24)",
-    company: "FAST National University of Computer & Emerging Sciences",
+    period: "Jul 2026 - Present",
+    role: "Software Engineer Intern",
+    company: "Telenor Shared Services",
     description:
-      "Gained a strong foundation in computer science, software design patterns, and engineering principles. Honored on the Dean's List of Honors (Spring 2024 & Fall 2024).",
-    technologies: ["Software Engineering", "Data Structures", "System Design", "C++", "Python"],
+      "Developing scalable web applications with React.js, TypeScript, ASP.NET Core, and RESTful APIs while building reusable UI components for production-ready features.",
+    technologies: ["React.js", "TypeScript", "ASP.NET Core", "REST APIs", "UI Components"],
     current: true,
   },
   {
-    period: "Jun 2025 — Aug 2025",
-    role: "Full Stack Developer",
-    company: "CHRIO (AI-powered sports infotainment)",
+    period: "Jul 2026 - Present",
+    role: "Frontend AI Engineer Intern",
+    company: "FlyRank AI",
     description:
-      "Built and optimized scalable frontend modules using React.js and Next.js, supporting 10K+ concurrent users. Integrated RESTful APIs for real-time match analytics and data flow.",
-    technologies: ["React.js", "Next.js", "REST APIs", "Node.js", "State Management"],
+      "Developing AI-powered frontend applications using React.js, TypeScript, and modern frontend technologies for automated business workflows.",
+    technologies: ["React.js", "TypeScript", "AI Frontend", "Frontend Architecture"],
+    current: true,
+  },
+  {
+    period: "Jun 2025 - Aug 2025",
+    role: "Full Stack Developer",
+    company: "CHRIO",
+    description:
+      "Developed an AI-powered HR Resource Portal with Next.js, GPT-based resume analysis, candidate-job matching, and a recruiter dashboard.",
+    technologies: ["Next.js", "GPT Integration", "REST APIs", "Dashboard UI", "Full Stack"],
     current: false,
   },
   {
-    period: "Aug 2025 — Nov 2025",
+    period: "Aug 2025 - Nov 2025",
     role: "Career-Prep Fellow",
-    company: "AMAL ACADEMY (Stanford University Funded)",
+    company: "AMAL ACADEMY",
     description:
-      "Selected from 4,500+ applicants for professional growth training. Developed advanced team collaboration, communication, and real-world problem-solving skills.",
-    technologies: ["Team Leadership", "Communication", "Problem Solving", "Project Planning"],
+      "Selected from 4,500+ applicants for a Stanford-funded fellowship and completed 150+ hours of training in communication, teamwork, and problem solving.",
+    technologies: ["Communication", "Teamwork", "Problem Solving", "Leadership"],
+    current: false,
+  },
+  {
+    period: "Aug 2022 - Jun 2026",
+    role: "BS Software Engineering Graduate (CGPA: 3.23)",
+    company: "FAST National University of Computer & Emerging Sciences",
+    description:
+      "Graduated from FAST NUCES Islamabad with a foundation in OOP, data structures, algorithms, DBMS, SDLC, and software design.",
+    technologies: ["Software Engineering", "OOP", "DSA", "DBMS", "SDLC"],
     current: false,
   },
 ];
@@ -31,60 +49,42 @@ const experiences = [
 export const Experience = () => {
   return (
     <section id="experience" className="py-32 relative overflow-hidden">
-      <div
-        className="absolute top-1/2 left-1/4 w-96
-       h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
-      />
+      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
         <div className="max-w-3xl mb-16">
-          <span
-            className="text-secondary-foreground text-sm
-           font-medium tracking-wider uppercase animate-fade-in"
-          >
+          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             Career Journey
           </span>
-          <h2
-            className="text-4xl md:text-5xl font-bold
-           mt-4 mb-6 animate-fade-in animation-delay-100
-            text-secondary-foreground"
-          >
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Experience that{" "}
             <span className="font-serif italic font-normal text-white">
-              {" "}
               speaks volumes.
             </span>
           </h2>
 
-          <p
-            className="text-muted-foreground
-           animate-fade-in animation-delay-200"
-          >
-            A timeline of my academic journey and professional experiences, building robust software solutions.
+          <p className="text-muted-foreground animate-fade-in animation-delay-200">
+            A timeline of my current internships, previous professional
+            experience, fellowship training, and academic foundation.
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
           <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
 
-          {/* Experience Items */}
           <div className="space-y-12">
             {experiences.map((exp, idx) => (
               <div
-                key={idx}
+                key={`${exp.company}-${exp.role}`}
                 className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
                 style={{ animationDelay: `${(idx + 1) * 150}ms` }}
               >
-                {/* Timeline Dot */}
                 <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
                   {exp.current && (
                     <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
                   )}
                 </div>
 
-                {/* Content */}
                 <div
                   className={`pl-8 md:pl-0 ${
                     idx % 2 === 0
@@ -92,9 +92,7 @@ export const Experience = () => {
                       : "md:col-start-2 md:pl-16"
                   }`}
                 >
-                  <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
-                  >
+                  <div className="glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500">
                     <span className="text-sm text-primary font-medium">
                       {exp.period}
                     </span>
@@ -108,9 +106,9 @@ export const Experience = () => {
                         idx % 2 === 0 ? "md:justify-end" : ""
                       }`}
                     >
-                      {exp.technologies.map((tech, techIdx) => (
+                      {exp.technologies.map((tech) => (
                         <span
-                          key={techIdx}
+                          key={tech}
                           className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
                         >
                           {tech}

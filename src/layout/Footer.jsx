@@ -1,8 +1,12 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/TechMusab", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/musabbinubaid/", label: "LinkedIn" },
+  {
+    icon: Linkedin,
+    href: "https://linkedin.com/in/musabbinubaid/",
+    label: "LinkedIn",
+  },
 ];
 
 const footerLinks = [
@@ -19,17 +23,15 @@ export const Footer = () => {
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight">
               MM<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
-              © {currentYear} Muhammad Musab Bin Ubaid. All rights reserved.
+              (c) {currentYear} Muhammad Musab Bin Ubaid. All rights reserved.
             </p>
           </div>
 
-          {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
               <a
@@ -42,7 +44,6 @@ export const Footer = () => {
             ))}
           </nav>
 
-          {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a

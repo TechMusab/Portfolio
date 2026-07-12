@@ -2,9 +2,9 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "HomeEase - AI-Powered Home Services",
+    title: "HomeEase - AI-Powered Home Services Platform",
     description:
-      "A cross-platform mobile application developed using React Native to connect users with verified home service providers. Features integrated REST APIs and an AI chatbot to automate user queries and bookings.",
+      "Final-year project: a cross-platform home services app built with React Native, REST API integration, seamless service booking, and an AI chatbot for automated user support.",
     image: "/projects/project1.png",
     tags: ["React Native", "REST APIs", "AI Chatbot", "Node.js", "MongoDB"],
     link: "https://github.com/engineersameer/HomeEase-App",
@@ -13,7 +13,7 @@ const projects = [
   {
     title: "Ham Raah - Ride-Sharing for Students",
     description:
-      "A real-time ride-sharing mobile application built using React Native for efficient student commute coordination, featuring a component-driven frontend architecture and integrated backend APIs.",
+      "A real-time student ride-sharing mobile app built with React Native, backend API integration, and a scalable component-based architecture for efficient commute coordination.",
     image: "/projects/project2.png",
     tags: ["React Native", "REST APIs", "State Management", "Tailwind CSS"],
     link: "https://github.com/TechMusab/Campool",
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Multi-Vendor eCommerce Store",
     description:
-      "A scalable React-based eCommerce platform supporting multiple vendors, dynamic product listings, cart management, and seamless REST API integrations.",
+      "A scalable multi-vendor eCommerce platform built with React.js, REST API integration, dynamic product listings, and cart management for a seamless shopping experience.",
     image: "/projects/project3.png",
     tags: ["React.js", "Express.js", "Node.js", "MongoDB", "Tailwind CSS"],
     link: "https://github.com/TechMusab/Ecommerce-Store",
